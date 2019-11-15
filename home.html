@@ -15,30 +15,28 @@
 
 <body>
   <div class="container mx-auto">
-    <h1>Spicy Bois Cafe</h1>
-  </div>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4" >Spicy Bois Cafe</h1>
+      <h3>Atlanta's Best Restaurant Ever</h3>
 
-  <div class="container mx-auto">
-    <div class="row">
-      <p>Make Your Reservation Here:</p>
-    </div>
-
-    <div class="row">
+      <div class="row">
         <div class="col">
-          <a href="/reserve"><button>Make Reservation</button></a>
+          <a href="/reserve"><button class="btn btn-danger btn-md">Make Reservation</button></a>
         </div>
         <div class="col">
-          <a href="/tables"><button>View Reservations</button></a>
+          <a href="/tables"><button class="btn btn-danger btn-md">View Reservations</button></a>
         </div>
-  </div>
-
-  <div class="container mx-auto">
-    <div class="row">
-      <div class="col">
-        <span>API Table Seating Link</span>
       </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto">
+    <div class="row">
       <div class="col">
-        <span>API Wait List</span>
+        <a href="/api"><span>API Table Seating Link</span></a>
+        ||
+        <a href="/api"><span>API Wait List</span></a>
+        
       </div>
     </div>
   </div>
