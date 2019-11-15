@@ -39,20 +39,35 @@
                 <p>Now Seating:</p>
             </div>
             <div class="row" id="now-seating">
-    
+                    <p>Party Name:</p><span id="name1"></span>
+                    <p>Phone Number:</p><span id="phone-number1"></span>
+                    <p>Party Email:</p><span id="email1"></span>
+                    <p>Unique ID:</p><span id="uniqueid1"></span>
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <p>Waiting List:</p>
-            </div>
-            <div class="row" id="waiting-list">
-
+            <h3>Waiting List:</h3>
+              <p>Party Name:</p><span id="name"></span>
+              <p>Phone Number:</p><span id="phone-number"></span>
+              <p>Party Email:</p><span id="email"></span>
+              <p>Unique ID:</p><span id="uniqueid"></span>
             </div>
         </div>
 <script>
-
+    $.get("api/tables", function (data){
+        $("#name1").append(data.name);
+        $("#phone-number1").append(data.phoneNumber);
+        $("#email1").append(data.email);
+        $("#uniqueid1").append(uniqueId);
+    })
+    $.get("api/reserve", function (data)){
+        $("#name").append(data.name);
+        $("#phone-number").append(data.phoneNumber);
+        $("#email").append(data.email);
+        $("#uniqueid").append(uniqueId);
+    }
 </script> 
 
     </body>
