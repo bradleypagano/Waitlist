@@ -36,6 +36,7 @@ app.post("/api/tables",function(req, res){
     if (tables.length < 5) {
         tables.push(newTable);
     } else {
+        console.log("tables are full");
         waitList.push(newTable);
     }
     res.json(newTable);
